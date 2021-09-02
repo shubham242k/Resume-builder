@@ -1,0 +1,58 @@
+.form-container{
+    height: 30rem;
+    width: 48rem;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -15px rgb(0 0 0 / 19%), 7px 0px 32px 8px rgb(0 0 0 / 19%);
+    display: flex;
+    flex-direction: row;
+}
+
+.form-display{
+    height: 100%;
+    width: 22rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: url("https://images.pexels.com/photos/5922535/pexels-photo-5922535.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+
+}
+
+.form-section{
+    height: 100%;
+    width: 26rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.option-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+.option{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(255,190,218,1);
+    /* border-bottom: 1px solid rgb(219, 213, 213); */
+    border-right: 1px solid rgb(219, 213, 213);
+}
+.signup-option{
+    border-top-right-radius: 10px;
+}
+/* .option:hover{
+    background-color: rgba(255,190,218,1);
+    border-bottom: 1px solid rgba(255,190,218,1);
+    color: rgb(255, 255, 255);
+} */
+
+.selected-option{
+    background-color: rgb(255, 255, 255);
+    color: rgba(255,190,218,1);
+}

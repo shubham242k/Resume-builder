@@ -1,0 +1,72 @@
+.personal-container{
+    width: 100%;
+    height: calc(100vh - 56px);
+    background: linear-gradient(90deg, rgba(255,190,218,1) 17%, rgba(173,206,245,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.personal-form{
+    width: 40%;
+    height: 100%;
+    padding: 15px 20px;
+    background-color: rgb(245, 247, 247);
+    overflow-y: scroll;
+}
+
+.personal-form::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+.detail-group{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.detail-group.skill-inputs{
+    flex-wrap: wrap;
+}
+
+.detail-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow:0px 0px 6px 0px rgb(195 207 222), -1px 0px 0px 0px rgb(206 198 198 / 19%);
+    border: 1px solid rgb(233, 225, 225);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.heading{
+    font-weight: 600;
+}
+
+.heading-and-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-button{
+    color: rgb(48, 138, 190);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.delete-text-button{
+    color: rgb(228, 77, 77);
+}
+
+.skill-div{
+    padding: 5px 10px;
+    background-color: rgb(123, 208, 219);
+    border-radius: 10px;
+    color: rgb(22, 84, 92);
+    cursor: pointer;
+    user-select: none;
+}

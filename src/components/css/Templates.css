@@ -1,0 +1,37 @@
+.template-container{
+    overflow-x: scroll;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background: linear-gradient(90deg, rgba(255,190,218,1) 17%, rgba(173,206,245,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+}
+.template-container::-webkit-scrollbar {
+    display: none;
+}
+
+.template{
+    flex-shrink: 0;
+    height: 440px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid rgb(228, 221, 221);
+    transition: 500ms ease-in-out;
+}
+
+.template:hover{
+    transform: scale(1.08);
+    box-shadow: 0px 0px 20px -15px rgb(0 0 0 / 19%), 7px 0px 32px 8px rgb(0 0 0 / 19%);
+
+
+}
+
+.template img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 5px;
+}

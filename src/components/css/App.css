@@ -1,0 +1,10 @@
+.screen-main{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(255,190,218);
+    background: linear-gradient(90deg, rgba(255,190,218,1) 17%, rgba(173,206,245,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}

@@ -1,0 +1,11 @@
+.title-navbar{
+    margin: 0px 10px;
+}
+
+#navbarSupportedContent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+

@@ -1,0 +1,85 @@
+.dashboard-container{
+    width: 100vw;
+    height: calc(100vh - 56px);
+    background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.dashboard-preview-resume-container{
+    height: 420px;
+    width: 285px;
+    background-color: white;
+    position: relative;
+}
+
+.template-all{
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    overflow-x: scroll;
+}
+.template-all div{
+    flex-shrink: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.dashobard-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+}
+.dashobard-header div{
+    flex-shrink: 1;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(9, 116, 116);
+}
+
+.link-button{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(42, 128, 131, 0.603);
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.link-button.setting{
+    bottom: 0;
+    right: 50;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.change-button{
+    
+    bottom: 0;
+    right: 5;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.option-button {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(42, 128, 131, 0.603);
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+}

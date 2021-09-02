@@ -1,0 +1,53 @@
+.preview-container{
+    height: 100%;
+    flex-grow: 1;
+    gap: 15px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-container-public{
+    background-color: rgb(227, 231, 235);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.preview-resume{
+    padding: 0px 15px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(228, 221, 221);
+}
+
+.editing-preview-resume-container{
+    height: 530px;
+    width: 362px;
+}
+
+.presume-resume.template-B{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.presume-resume.template-A{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+.optional-buttons{
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    align-items: center;
+
+}
