@@ -48,6 +48,7 @@
 .detail{
     font-size: 7px;
     max-width: inherit;
+    width: 74%;
 }
 
 .skill-preview{

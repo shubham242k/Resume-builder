@@ -39,7 +39,7 @@ let OptionalButtonsResume = () =>{
                             if(saveState.rid === ""){
                                 alert("TO generate Link, Save to database");
                             }else{
-                            alert(`https://shubham242k.github.io/Resume-builder/public-preview/${saveState.rid}`);
+                            alert(`https://shubham242k.github.io/Resume-builder/#/public-preview/${saveState.rid}`);
                             }
                             
                         }

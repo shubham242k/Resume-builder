@@ -132,7 +132,7 @@ let DashboardResmeTemplate = (props) =>{
                 <div className = "option-button-container">
                 <div className = "option-button link-button"
                 onClick ={()=>{
-                    alert(`https://shubham242k.github.io/Resume-builder/public-preview/${props.data.rid}`);
+                    alert(`https://shubham242k.github.io/Resume-builder/#/public-preview/${props.data.rid}`);
                 }}>
                     <span class="material-icons-outlined">link</span>
                 </div>
