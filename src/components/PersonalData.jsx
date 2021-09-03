@@ -6,6 +6,7 @@ import "./css/PersonalData.css"
 import Preview from "./Preview"
 import { useEffect, useState } from "react";
 import { skillAdd, skillDelete } from "../redux/actions/skillsAction";
+import { Redirect } from "react-router";
 let PersonalData = ()=>{
     let [currskill,setSkill] = useState("");
     let dispatch = useDispatch();
@@ -16,8 +17,10 @@ let PersonalData = ()=>{
         dispatch(detailCreator({skill:skills}));
         
     },[skills]);
+    let user = useSelector(state => state.user);
     return(
         <>
+        {user?"":<Redirect to="/authentication"/>}
         <div className="personal-container">
             
             <div className = "personal-form">

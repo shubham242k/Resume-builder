@@ -6,6 +6,7 @@ import { detailCreator } from "../redux/actions/detailsAction";
 import { saveCompleteCreator } from "../redux/actions/saveActions";
 import { templateCreator } from "../redux/actions/templateActions";
 import { useState } from "react";
+import { firestore } from "../firebase";
 
 let DashboardResmeTemplate = (props) =>{
     let dispatch = useDispatch();
@@ -126,6 +127,7 @@ let DashboardResmeTemplate = (props) =>{
         {
             !isVisible?"":
             <>
+                <div className = "option-button-container">
                 <div className = "option-button link-button"
                 onClick ={()=>{
                     alert(`localhost:3000/public-preview/${props.data.rid}`);
@@ -141,6 +143,14 @@ let DashboardResmeTemplate = (props) =>{
                     history.push("/personaldata");
                 }}>
                     <span class="material-icons-outlined">settings</span>
+                </div>
+
+                <div className = "option-button delete-button"
+                onClick ={async()=>{
+                   props.deleteResume(props.data.rid);
+                }}>
+                    <span class="material-icons-outlined">delete</span>
+                </div>
                 </div>
             </>
         }

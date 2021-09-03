@@ -9,7 +9,7 @@ let Form = () =>{
     let user = useSelector(state => state.user);
     return(
         <>
-        {user?<Redirect to = "/"/>:""}
+        {user?<Redirect to = "/home"/>:""}
         <div className = "form-container">
             <div className = "form-display"></div>
             <div className = "form-section">

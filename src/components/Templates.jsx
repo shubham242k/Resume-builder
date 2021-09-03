@@ -1,11 +1,14 @@
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory,Redirect } from "react-router-dom";
 import { templateCreator } from "../redux/actions/templateActions";
 import "./css/Templates.css"
 let Templates = () =>{
     let dispatch = useDispatch();
     let history = useHistory();
+    let user = useSelector(state => state.user);
     return(
+        <>
+        {user?"":<Redirect to="/authentication"/>}
         <div className = "template-container">
                 <div className = "template template1" 
                 onClick={()=>{
@@ -22,6 +25,7 @@ let Templates = () =>{
                     <img src="http://localhost:3000/template2.svg"/>
                 </div>
         </div>
+        </>
     )
 }
 

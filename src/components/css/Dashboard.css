@@ -41,21 +41,7 @@
     color: rgb(9, 116, 116);
 }
 
-.link-button{
-    height: 36px;
-    width: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(42, 128, 131, 0.603);
-    color: white;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 10px;
-    cursor: pointer;
-}
+
 
 .link-button.setting{
     bottom: 0;
@@ -64,13 +50,6 @@
     cursor: pointer;
 }
 
-.change-button{
-    
-    bottom: 0;
-    right: 5;
-    margin: 10px;
-    cursor: pointer;
-}
 
 .option-button {
     height: 36px;
@@ -78,8 +57,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(42, 128, 131, 0.603);
+    background: rgb(236,87,151);;
+    background-color: linear-gradient(90deg, rgba(236,87,151,1) 17%, rgba(149,89,223,1) 100%);
     color: white;
     border-radius: 50%;
+    
+}
+
+.option-button-container{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.empty-message{
+    font-weight: 700;
+    font-size: 3rem;
+    position: fixed;
+    top: 0;
+    margin: 41px 5px;
+    color: rgb(36, 83, 83);
 }

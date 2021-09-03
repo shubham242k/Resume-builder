@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./css/Dashboard.css"
 import {firestore} from "../firebase"
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import DashboardResmeTemplate from "./DashboardResmeTemplate";
+import { Redirect } from "react-router";
 let Profile = () =>{
     
     let [datas,setData] = useState(null);
@@ -21,11 +22,21 @@ let Profile = () =>{
             console.log(datas);
         }
         
-    },[])
+    },[]);
+
+    let deleteResume = async(resumeid) =>{
+        await firestore.collection("resumes").doc(resumeid).delete();
+        let newDatas = datas.filter(data =>{
+            return (data.rid != resumeid);
+        })
+        setData(newDatas);
+    }
     return(
+        <>
+        {user?"":<Redirect to ="/authentication"/>}
         <div className = "dashboard-container">
             {   
-            datas?
+            datas && datas.length !=0?
                 <>
                 {console.log(datas)}
                 <div className = "dashobard-header">
@@ -39,7 +50,7 @@ let Profile = () =>{
                     {
                     datas.map((data)=>{
                         return(
-                            <DashboardResmeTemplate data = {data}/>
+                            <DashboardResmeTemplate data = {data} deleteResume ={deleteResume}/>
                         )
                     })
                     }
@@ -47,11 +58,15 @@ let Profile = () =>{
 
                 </div>
             </>
-            :""
+            :
+            <div className = "empty-message">
+                EMPTY DASHBOARD
+            </div>
             }
         
             
         </div>
+        </>
     )
 }
 
