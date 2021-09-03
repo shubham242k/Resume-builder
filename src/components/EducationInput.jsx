@@ -12,21 +12,17 @@ let EducationInput = (props) =>{
     let[isAdded,setStatus] = useState(false);
     let dispatch = useDispatch();
     useEffect(()=>{
-        console.log("try");
-        console.log(education);
         for(let i = 0;i<education.length;i++){
             if(education[i].ednumber == props.edNumber){
-                console.log("anything");
                 setSchoolname(education[i].schoolname);
                 setDegree(education[i].degree);
                 setYear(education[i].year);
                 setStatus(true);
-                break;
+                // break;
             }
         }
     },[]);
     useEffect(()=>{
-        console.log(education);
         dispatch(detailCreator({education}));
         
     },[education]);

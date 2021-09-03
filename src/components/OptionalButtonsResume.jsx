@@ -31,7 +31,6 @@ let OptionalButtonsResume = () =>{
                     dispatch(saveResume(uid,details,templateCode))
                 }
             }>Save new to Database</button>
-            <button type="button" class="btn btn-light">Download PDF</button>
             {
                 !isPublic?"":
                 <button type="button" class="btn btn-light"
@@ -40,7 +39,7 @@ let OptionalButtonsResume = () =>{
                             if(saveState.rid === ""){
                                 alert("TO generate Link, Save to database");
                             }else{
-                            alert(`localhost:3000/public-preview/${saveState.rid}`);
+                            alert(`https://shubham242k.github.io/Resume-builder/public-preview/${saveState.rid}`);
                             }
                             
                         }

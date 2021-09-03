@@ -16,18 +16,16 @@ let ExperienceInput = (props) =>{
     useEffect(()=>{
 
         for(let i = 0;i<experience.length;i++){
-            if(experience[i].ednumber == props.exNumber){
+            if(experience[i].exnumber == props.exNumber){
                 setJobTitle(experience[i].jobTitle);
                 setDescription(experience[i].description);
                 setStartDate(experience[i].startDate);
                 setEndDate(experience[i].endDate);
                 setStatus(true);
-                break;
             }
         }
     },[]);
     useEffect(()=>{
-        console.log(experience);
         dispatch(detailCreator({experience}));
     },[experience]);
 

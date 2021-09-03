@@ -19,7 +19,6 @@ let Profile = () =>{
             }
             
             setData(dataArr);
-            console.log(datas);
         }
         
     },[]);
@@ -38,7 +37,6 @@ let Profile = () =>{
             {   
             datas && datas.length !=0?
                 <>
-                {console.log(datas)}
                 <div className = "dashobard-header">
                     <div>DashBoard</div>
                 </div>

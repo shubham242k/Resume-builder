@@ -1,7 +1,11 @@
 let educationReducer = (state = [],action) =>{
     switch(action.type){
         case "ADD_EDUCATION":
-            return [...state,action.payload];
+            if(Array.isArray(action.payload))
+                return action.payload;
+            else{
+                return [...state,action.payload];
+            }
         case "DELETE_EDUCATION":
             
             let ns = state.filter((s)=>{

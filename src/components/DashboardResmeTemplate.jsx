@@ -6,7 +6,9 @@ import { detailCreator } from "../redux/actions/detailsAction";
 import { saveCompleteCreator } from "../redux/actions/saveActions";
 import { templateCreator } from "../redux/actions/templateActions";
 import { useState } from "react";
-import { firestore } from "../firebase";
+import { educationAdd } from "../redux/actions/educationAction";
+import { experienceAdd } from "../redux/actions/experienceAction";
+import { skillAdd } from "../redux/actions/skillsAction";
 
 let DashboardResmeTemplate = (props) =>{
     let dispatch = useDispatch();
@@ -77,7 +79,7 @@ let DashboardResmeTemplate = (props) =>{
                 {
                     experience.length == 0 ? "":
                     <div className ={`detail-groups template-${templateCode}`}>
-                        <div className = "section-heading">Education</div>
+                        <div className = "section-heading">Experience</div>
                         {
                             templateCode === "A"?"": <div className = "line-breaker"></div>
                         }
@@ -130,7 +132,7 @@ let DashboardResmeTemplate = (props) =>{
                 <div className = "option-button-container">
                 <div className = "option-button link-button"
                 onClick ={()=>{
-                    alert(`localhost:3000/public-preview/${props.data.rid}`);
+                    alert(`https://shubham242k.github.io/Resume-builder/public-preview/${props.data.rid}`);
                 }}>
                     <span class="material-icons-outlined">link</span>
                 </div>
@@ -139,7 +141,10 @@ let DashboardResmeTemplate = (props) =>{
                 onClick ={()=>{
                     dispatch(detailCreator({...details}));
                     dispatch(saveCompleteCreator(props.data.rid));
-                    dispatch(templateCreator(templateCode))
+                    dispatch(templateCreator(templateCode));
+                    dispatch(educationAdd(details.education));
+                    dispatch(experienceAdd(details.experience));
+                    dispatch(skillAdd(details.skill));
                     history.push("/personaldata");
                 }}>
                     <span class="material-icons-outlined">settings</span>

@@ -1,7 +1,12 @@
 let skillReducer = (state = [],action) =>{
     switch(action.type){
         case "ADD_SKILL":
-            return [...state,action.payload];
+            
+            if(Array.isArray(action.payload))
+                return action.payload;
+            else{
+                return [...state,action.payload];
+            }
         case "DELETE_SKILL":
             {
                 let ns = state.filter((st)=>{
