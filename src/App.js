@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import {useDispatch, useSelector} from "react-redux";
 import { auth, firestore } from "./firebase";
 import {createuser} from "./redux/actions/userAction";
-import { BrowserRouter as Router, Switch, Route, Redirect, Link, useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect, Link, HashRouter } from "react-router-dom";
 import PublicPreview from "./components/PublicPreview";
 import Profile from "./components/Profile";
 import Templates from "./components/Templates";
@@ -39,7 +39,7 @@ let App = () => {
     <>
           
 
-    <Router>
+    <HashRouter basename = "/">
       {
         user?
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
@@ -59,27 +59,19 @@ let App = () => {
                 <Link className="nav-link" to="/profile">Dashboard</Link>
             </li>
 
-            <li className="nav-item"
-            onClick = {()=>{
-                auth.signOut();
-                <Redirect to="/"/> 
-            }}>
-                <a className="nav-link" href="#">Logout</a>
+            <li className="nav-item">
+                <Link className="nav-link" href="/">Logout</Link>
             </li>
             </ul>
         </div>
       </nav>
      :""
       }
-     <Switch>
-       
+
         <Route path = "//">
             {
             <Redirect to ="/home"/>
             }
-        </Route>
-        <Route path = "/Resume-builder">
-            <PublicPreview/>
         </Route>
         <Route path = "/public-preview/:rid">
             <PublicPreview/>
@@ -93,9 +85,8 @@ let App = () => {
         <Route path = "/home"><Redirect to="/templates"/></Route>
         <Route path = "/templates"><Templates></Templates></Route>
         <Route path = "/personaldata"><PersonalData/></Route>
-        
-      </Switch>
-    </Router>
+
+    </HashRouter>
     </>
     
     
