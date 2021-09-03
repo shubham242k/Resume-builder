@@ -72,10 +72,14 @@ let App = () => {
      :""
       }
      <Switch>
+       
         <Route path = "//">
             {
             <Redirect to ="/home"/>
             }
+        </Route>
+        <Route path = "/Resume-builder">
+            <PublicPreview/>
         </Route>
         <Route path = "/public-preview/:rid">
             <PublicPreview/>
