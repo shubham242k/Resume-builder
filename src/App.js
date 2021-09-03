@@ -59,8 +59,10 @@ let App = () => {
                 <Link className="nav-link" to="/profile">Dashboard</Link>
             </li>
 
-            <li className="nav-item">
-                <Link className="nav-link" href="/">Logout</Link>
+            <li className="nav-item" onClick = {()=>{
+              auth.signOut();
+            }}>
+                <Link className="nav-link" to="/">Logout</Link>
             </li>
             </ul>
         </div>

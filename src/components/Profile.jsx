@@ -34,7 +34,7 @@ let Profile = () =>{
     return(
         <>
         {user?"":<Redirect to ="/authentication"/>}
-        <div className = "dashboard-container">
+        <div className = "dashboard-container ">
             {   
             datas && datas.length !=0?
                 <>
