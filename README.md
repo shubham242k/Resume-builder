@@ -2,6 +2,8 @@
 Resume builder is a web application built with Reactjs. Resume builder is a platform where user can create their resumes.
 Firebase services has been used to store data of users
 
+https://shubham242k.github.io/Resume-builder
+
 ## Technology used
 Reactjs for creating interactive user interfaces.
 Firebase services for user authentication and managing data.
