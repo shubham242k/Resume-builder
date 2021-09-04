@@ -56,7 +56,7 @@ let App = () => {
             </li>
             
             <li className="nav-item">
-                <Link className="nav-link" to="/profile">Dashboard</Link>
+                <Link className="nav-link" to="/dashboard">Dashboard</Link>
             </li>
 
             <li className="nav-item" onClick = {()=>{
@@ -70,7 +70,7 @@ let App = () => {
      :""
       }
 
-        <Route path = "//">
+        <Route path = "/">
             {
             <Redirect to ="/home"/>
             }
@@ -83,7 +83,7 @@ let App = () => {
             <Form/>
           </div>
         </Route>
-        <Route path = "/profile"><Profile></Profile></Route>
+        <Route path = "/dashboard"><Profile></Profile></Route>
         <Route path = "/home"><Redirect to="/templates"/></Route>
         <Route path = "/templates"><Templates></Templates></Route>
         <Route path = "/personaldata"><PersonalData/></Route>

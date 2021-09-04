@@ -66,10 +66,6 @@ let PersonalData = ()=>{
                 <div className = "education detail-section">
                     <div className = "heading-and-button">
                         <div className = "heading">Education</div>
-                        <div className = "text-button" 
-                        onClick = {()=>{
-                            
-                        }}>Add more</div>
                     </div>
                     
                     <EducationInput edNumber = {0}/>
