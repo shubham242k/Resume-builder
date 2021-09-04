@@ -62,7 +62,7 @@ let App = () => {
             <li className="nav-item" onClick = {()=>{
               auth.signOut();
             }}>
-                <Link className="nav-link" to="/">Logout</Link>
+                <Link className="nav-link" to="/authentication">Logout</Link>
             </li>
             </ul>
         </div>
