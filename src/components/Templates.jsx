@@ -15,14 +15,14 @@ let Templates = () =>{
                     history.push("/personaldata");
                     dispatch(templateCreator("A"))
                 }}>
-                    <img src="https://shubham242k.github.io/Resume-builder/#/template1.svg"/>
+                    <img src="http://shubham242k.github.io/Resume-builder/template1.svg"/>
                 </div>
                 <div className = "template template2"
                 onClick={()=>{
                     history.push("/personaldata");
                     dispatch(templateCreator("B"))
                 }}>
-                    <img src="https://shubham242k.github.io/Resume-builder/#/template2.svg"/>
+                    <img src="http://shubham242k.github.io/Resume-builder/template2.svg"/>
                 </div>
         </div>
         </>
