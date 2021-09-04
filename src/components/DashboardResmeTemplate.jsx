@@ -130,6 +130,13 @@ let DashboardResmeTemplate = (props) =>{
             !isVisible?"":
             <>
                 <div className = "option-button-container">
+                <div className = "option-button delete-button"
+                onClick ={async()=>{
+                   props.deleteResume(props.data.rid);
+                }}>
+                    <span class="material-icons-outlined">delete</span>
+                </div>
+                
                 <div className = "option-button link-button"
                 onClick ={()=>{
                     alert(`https://shubham242k.github.io/Resume-builder/#/public-preview/${props.data.rid}`);
@@ -150,12 +157,7 @@ let DashboardResmeTemplate = (props) =>{
                     <span class="material-icons-outlined">settings</span>
                 </div>
 
-                <div className = "option-button delete-button"
-                onClick ={async()=>{
-                   props.deleteResume(props.data.rid);
-                }}>
-                    <span class="material-icons-outlined">delete</span>
-                </div>
+                
                 </div>
             </>
         }

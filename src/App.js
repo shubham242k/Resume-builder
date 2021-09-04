@@ -75,7 +75,7 @@ let App = () => {
             <Redirect to ="/home"/>
             }
         </Route>
-        <Route path = "/public-preview/:rid">
+        <Route path = "//public-preview/:rid">
             <PublicPreview/>
         </Route>
         <Route path = "/authentication">
